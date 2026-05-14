@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMIÈRE — You're Offline</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Cormorant+SC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Outfit',sans-serif;
+    background:#0A0F0D;color:#FAFAF7;
+    min-height:100vh;display:flex;
+    align-items:center;justify-content:center;
+    padding:40px 24px;
+  }
+  .wrap{text-align:center;max-width:480px;}
+  .diamond{
+    width:10px;height:10px;background:#E8B4B8;
+    transform:rotate(45deg);margin:0 auto 32px;opacity:.7;
+  }
+  .icon{margin-bottom:24px;opacity:.4;}
+  h1{
+    font-family:'Outfit',sans-serif;
+    font-size:clamp(1.6rem,4vw,2.2rem);
+    font-weight:200;color:#FAFAF7;
+    letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;
+  }
+  p{
+    font-size:.9rem;font-weight:300;
+    color:rgba(250,250,247,.45);line-height:1.8;margin-bottom:36px;
+  }
+  .btn{
+    display:inline-block;
+    font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:400;
+    letter-spacing:.18em;text-transform:uppercase;
+    color:#FAFAF7;background:#1B4332;
+    border:1px solid #1B4332;padding:15px 36px;
+    text-decoration:none;cursor:pointer;
+    transition:background .3s,border-color .3s;
+  }
+  .btn:hover{background:#C9848A;border-color:#C9848A;}
+  .brand{
+    font-family:'Cormorant SC',serif;
+    font-size:.65rem;font-weight:300;
+    letter-spacing:.6em;color:rgba(196,168,130,.25);
+    text-transform:uppercase;margin-top:60px;display:block;
+  }
+  .pulse{
+    width:60px;height:60px;margin:0 auto 24px;
+    border-radius:50%;border:1px solid rgba(232,180,184,.2);
+    display:flex;align-items:center;justify-content:center;
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{transform:scale(1);border-color:rgba(232,180,184,.2);}
+    50%{transform:scale(1.08);border-color:rgba(232,180,184,.5);}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="diamond"></div>
+    <div class="pulse">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8B4B8" stroke-width="1.5">
+        <path d="M1 6s4-2 11-2 11 2 11 2"/>
+        <path d="M5 10s3-1.5 7-1.5S19 10 19 10"/>
+        <path d="M8.5 14s1.5-1 3.5-1 3.5 1 3.5 1"/>
+        <line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1>You appear to be offline.</h1>
+    <p>
+      Lumière requires a connection to serve you properly.
+      Please check your internet connection and try again.
+    </p>
+    <button class="btn" onclick="window.location.reload()">Try Again</button>
+    <span class="brand">LUMIÈRE · Maison de Beauté</span>
+  </div>
+</body>
+</html>

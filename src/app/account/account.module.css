@@ -1,0 +1,242 @@
+/* ── AUTH ── */
+.authWrap {
+  min-height: 100vh; display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 72px;
+}
+.authBox {
+  padding: 80px 72px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  background: #FAFAF7;
+}
+.authLogo { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+.authLogoName {
+  font-family: 'Cormorant SC', serif; font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.5em; color: #C4A882;
+}
+.authTabs { display: flex; gap: 0; margin-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.authTab {
+  font-family: 'Cormorant SC', serif; font-size: 0.65rem; font-weight: 300;
+  letter-spacing: 0.3em; text-transform: uppercase; color: #8A8880;
+  background: none; border: none; padding: 12px 24px 12px 0;
+  position: relative; transition: color 0.3s;
+}
+.authTab::after {
+  content: ''; position: absolute; bottom: -1px; left: 0;
+  width: 0; height: 2px; background: #0A0F0D;
+  transition: width 0.35s cubic-bezier(0.76,0,0.24,1);
+}
+.authTabActive { color: #0A0F0D; }
+.authTabActive::after { width: 100%; }
+.authTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 200;
+  color: #0A0F0D; letter-spacing: -0.02em; margin-bottom: 10px;
+}
+.authSub {
+  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 300;
+  color: #8A8880; margin-bottom: 36px; line-height: 1.7;
+}
+.authForm { display: flex; flex-direction: column; gap: 16px; max-width: 400px; }
+.authField { display: flex; flex-direction: column; gap: 7px; }
+.authLabel {
+  font-family: 'Cormorant SC', serif; font-size: 0.58rem; font-weight: 300;
+  letter-spacing: 0.3em; color: #8A8880; text-transform: uppercase;
+}
+.authInput {
+  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 300;
+  color: #0A0F0D; background: #FAFAF7;
+  border: 1px solid rgba(0,0,0,0.15); padding: 14px 16px; outline: none;
+  transition: border-color 0.3s;
+}
+.authInput:focus { border-color: #1B4332; }
+.authInput::placeholder { color: #8A8880; }
+.authBtn {
+  font-family: 'Cormorant SC', serif; font-size: 0.65rem; font-weight: 400;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #FAFAF7; background: #0A0F0D; border: none; padding: 18px;
+  margin-top: 8px; position: relative; overflow: hidden; transition: color 0.4s;
+}
+.authBtn::before {
+  content: ''; position: absolute; inset: 0; background: #1B4332;
+  transform: translateX(-101%); transition: transform 0.5s cubic-bezier(0.76,0,0.24,1);
+}
+.authBtn:hover::before { transform: translateX(0); }
+.authBtn span { position: relative; z-index: 1; }
+.authForgot {
+  font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 300;
+  color: #8A8880; background: none; border: none;
+  text-decoration: underline; text-underline-offset: 3px;
+  text-align: left; transition: color 0.3s;
+}
+.authForgot:hover { color: #0A0F0D; }
+.authImg { position: relative; overflow: hidden; }
+.authImg img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(0.8); }
+.authImgOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,15,13,0.6) 0%, transparent 50%);
+}
+.authImgQuote {
+  position: absolute; bottom: 40px; left: 40px; right: 40px;
+  font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 200;
+  color: #FAFAF7; line-height: 1.6; letter-spacing: -0.01em;
+}
+
+/* ── ACCOUNT PAGE ── */
+.page {
+  min-height: 100vh; display: grid;
+  grid-template-columns: 280px 1fr;
+  padding-top: 72px; background: #FAFAF7;
+}
+.sidebar {
+  border-right: 1px solid rgba(0,0,0,0.07);
+  padding: 48px 32px;
+  background: #F0EBE1;
+}
+.sidebarUser {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 40px; padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.avatar {
+  width: 44px; height: 44px; background: #1B4332;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 400;
+  color: #FAFAF7; letter-spacing: 0.05em; flex-shrink: 0;
+}
+.userName {
+  font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 400;
+  color: #0A0F0D; display: block; margin-bottom: 3px;
+}
+.userEmail {
+  font-family: 'Outfit', sans-serif; font-size: 0.74rem; font-weight: 300;
+  color: #8A8880; display: block;
+}
+.sidebarNav { display: flex; flex-direction: column; gap: 4px; }
+.sidebarLink {
+  font-family: 'Outfit', sans-serif; font-size: 0.84rem; font-weight: 300;
+  color: #8A8880; background: none; border: none;
+  padding: 12px 14px; text-align: left; text-decoration: none;
+  display: block; transition: color 0.3s, background 0.3s;
+  position: relative;
+}
+.sidebarLink::before {
+  content: ''; position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%); width: 0; height: 16px;
+  background: #C9848A; transition: width 0.3s;
+}
+.sidebarLink:hover { color: #0A0F0D; background: rgba(0,0,0,0.03); }
+.sidebarLinkActive { color: #0A0F0D; font-weight: 400; }
+.sidebarLinkActive::before { width: 2px; }
+.sidebarSignOut {
+  margin-top: 24px; font-family: 'Outfit', sans-serif; font-size: 0.78rem;
+  font-weight: 300; color: #C9848A; background: none; border: none;
+  padding: 10px 14px; text-align: left; transition: color 0.3s;
+}
+.sidebarSignOut:hover { color: #0A0F0D; }
+
+.main { padding: 52px 72px; }
+.section {}
+.sectionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.4rem,3vw,2rem); font-weight: 200;
+  color: #0A0F0D; letter-spacing: -0.02em; margin-bottom: 36px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+/* Profile */
+.profileGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; max-width: 600px; }
+.profileField { display: flex; flex-direction: column; gap: 7px; }
+.profileLabel {
+  font-family: 'Cormorant SC', serif; font-size: 0.58rem; font-weight: 300;
+  letter-spacing: 0.3em; color: #8A8880; text-transform: uppercase;
+}
+.profileInput {
+  font-family: 'Outfit', sans-serif; font-size: 0.86rem; font-weight: 300;
+  color: #0A0F0D; background: #FAFAF7;
+  border: 1px solid rgba(0,0,0,0.12); padding: 13px 15px; outline: none;
+  transition: border-color 0.3s;
+}
+.profileInput:focus { border-color: #1B4332; }
+.saveBtn {
+  font-family: 'Cormorant SC', serif; font-size: 0.63rem; font-weight: 400;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: #FAFAF7; background: #0A0F0D; border: none; padding: 16px 40px;
+  position: relative; overflow: hidden; transition: color 0.4s;
+}
+.saveBtn::before {
+  content: ''; position: absolute; inset: 0; background: #1B4332;
+  transform: translateX(-101%); transition: transform 0.5s cubic-bezier(0.76,0,0.24,1);
+}
+.saveBtn:hover::before { transform: translateX(0); }
+.saveBtn span { position: relative; z-index: 1; }
+
+/* Orders */
+.ordersList { display: flex; flex-direction: column; gap: 16px; max-width: 680px; }
+.orderCard { background: #F0EBE1; padding: 24px 28px; }
+.orderTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.orderId {
+  font-family: 'Cormorant SC', serif; font-size: 0.65rem; font-weight: 400;
+  letter-spacing: 0.28em; color: #C4A882; text-transform: uppercase; display: block; margin-bottom: 4px;
+}
+.orderDate { font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 300; color: #8A8880; }
+.orderStatus {
+  font-family: 'Cormorant SC', serif; font-size: 0.56rem; font-weight: 300;
+  letter-spacing: 0.25em; text-transform: uppercase; padding: 5px 12px;
+}
+.orderDelivered { background: rgba(27,67,50,0.1); color: #1B4332; }
+.orderItems { font-family: 'Outfit', sans-serif; font-size: 0.84rem; font-weight: 300; color: #0A0F0D; margin-bottom: 16px; }
+.orderFooter { display: flex; justify-content: space-between; align-items: center; }
+.orderTotal { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 300; color: #C4A882; }
+.orderReorder {
+  font-family: 'Cormorant SC', serif; font-size: 0.58rem; font-weight: 300;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #0A0F0D; border: 1px solid rgba(0,0,0,0.15);
+  background: transparent; padding: 8px 20px; transition: all 0.3s;
+}
+.orderReorder:hover { background: #0A0F0D; color: #FAFAF7; border-color: #0A0F0D; }
+
+/* Wishlist */
+.wishGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.wishCard { background: #EDE8DF; display: flex; flex-direction: column; }
+.wishImg { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.wishInfo { padding: 16px 18px 20px; background: #FAFAF7; flex: 1; }
+.wishName { font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 300; color: #0A0F0D; margin-bottom: 6px; }
+.wishPrice { font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 300; color: #C4A882; margin-bottom: 12px; }
+.wishAdd {
+  display: block; width: 100%;
+  font-family: 'Cormorant SC', serif; font-size: 0.58rem; font-weight: 400;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #FAFAF7; background: #0A0F0D; border: none; padding: 10px;
+  position: relative; overflow: hidden; transition: color 0.4s;
+}
+.wishAdd::before {
+  content: ''; position: absolute; inset: 0; background: #1B4332;
+  transform: translateX(-101%); transition: transform 0.45s cubic-bezier(0.76,0,0.24,1);
+}
+.wishAdd:hover::before { transform: translateX(0); }
+.wishAdd span { position: relative; z-index: 1; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main { padding: 40px 48px; }
+  .wishGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .authWrap { grid-template-columns: 1fr; }
+  .authImg { display: none; }
+  .authBox { padding: 100px 28px 60px; }
+  .page { grid-template-columns: 1fr; }
+  .sidebar { padding: 80px 24px 32px; }
+  .sidebarUser { display: none; }
+  .sidebarNav { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .sidebarLink { padding: 8px 14px; border: 1px solid rgba(0,0,0,0.1); }
+  .main { padding: 32px 24px; }
+  .profileGrid { grid-template-columns: 1fr; }
+  .wishGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .authBox { padding: 88px 18px 48px; }
+  .main { padding: 24px 18px; }
+}

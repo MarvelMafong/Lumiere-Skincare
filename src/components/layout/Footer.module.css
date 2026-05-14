@@ -1,0 +1,166 @@
+.footer {
+  position: relative;
+  background: #111510;
+  overflow: hidden;
+}
+.top {
+  padding: 80px 72px 64px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 60px;
+  border-bottom: 1px solid rgba(250,250,247,0.06);
+}
+.brand {}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; margin-bottom: 28px;
+}
+.logoName {
+  font-family: 'Cormorant SC', serif; font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.55em; color: #C4A882;
+}
+.desc {
+  font-family: 'Outfit', sans-serif; font-size: 0.84rem; font-weight: 300;
+  color: #6B7B72; line-height: 1.8; max-width: 280px; margin-bottom: 32px;
+}
+.social { display: flex; gap: 14px; margin-bottom: 28px; }
+.socialLink {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(250,250,247,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: #6B7B72; text-decoration: none;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.socialLink:hover { border-color: #E8B4B8; color: #E8B4B8; background: rgba(232,180,184,0.05); }
+.certs { display: flex; gap: 10px; flex-wrap: wrap; }
+.cert {
+  font-family: 'Cormorant SC', serif; font-size: 0.52rem; font-weight: 300;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(250,250,247,0.3);
+  border: 1px solid rgba(250,250,247,0.08); padding: 5px 10px;
+}
+.colTitle {
+  font-family: 'Cormorant SC', serif; font-size: 0.62rem; font-weight: 400;
+  letter-spacing: 0.35em; color: #C4A882; text-transform: uppercase;
+  display: block; margin-bottom: 24px;
+}
+.links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.links li a {
+  font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 300;
+  color: #6B7B72; text-decoration: none;
+  transition: color 0.3s; position: relative; display: inline-block;
+}
+.links li a::before {
+  content: ''; position: absolute; bottom: -1px; left: 0;
+  width: 0; height: 1px; background: #E8B4B8;
+  transition: width 0.35s cubic-bezier(0.76,0,0.24,1);
+}
+.links li a:hover { color: #FAFAF7; }
+.links li a:hover::before { width: 100%; }
+
+.mid {
+  padding: 48px 72px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+  border-bottom: 1px solid rgba(250,250,247,0.06);
+}
+.contactLabel {
+  font-family: 'Cormorant SC', serif; font-size: 0.6rem; font-weight: 300;
+  letter-spacing: 0.4em; color: #6B7B72; text-transform: uppercase;
+  display: block; margin-bottom: 14px;
+}
+.contactEmail {
+  font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 200;
+  color: #C4A882; text-decoration: none; letter-spacing: -0.01em;
+  transition: color 0.3s; display: inline-block; position: relative;
+}
+.contactEmail::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 1px; background: #E8B4B8;
+  transition: width 0.4s cubic-bezier(0.76,0,0.24,1);
+}
+.contactEmail:hover { color: #E8B4B8; }
+.contactEmail:hover::after { width: 100%; }
+.contactAddress {
+  font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 300;
+  color: #4A5450; line-height: 1.7; margin-top: 16px;
+}
+.awards { display: flex; gap: 32px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+.award { text-align: right; }
+.awardNum {
+  font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 200;
+  color: #E8B4B8; display: block; line-height: 1;
+}
+.awardLabel {
+  font-family: 'Cormorant SC', serif; font-size: 0.52rem; font-weight: 300;
+  letter-spacing: 0.22em; color: #4A5450; text-transform: uppercase;
+  display: block; margin-top: 4px;
+}
+
+.bottom {
+  padding: 24px 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+  border-bottom: 1px solid rgba(250,250,247,0.04);
+}
+.legal { display: flex; gap: 24px; flex-wrap: wrap; }
+.legal a {
+  font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 300;
+  color: rgba(250,250,247,0.25); text-decoration: none; transition: color 0.3s;
+}
+.legal a:hover { color: rgba(250,250,247,0.6); }
+.copyright {
+  font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 300;
+  color: rgba(250,250,247,0.2); letter-spacing: 0.02em;
+}
+.payment { display: flex; gap: 10px; align-items: center; }
+.payLabel {
+  font-family: 'Cormorant SC', serif; font-size: 0.5rem; font-weight: 300;
+  letter-spacing: 0.28em; color: rgba(250,250,247,0.2); text-transform: uppercase;
+}
+.payIcon {
+  font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 300;
+  color: rgba(250,250,247,0.2);
+  border: 1px solid rgba(250,250,247,0.1); padding: 3px 8px;
+  transition: border-color 0.3s, color 0.3s;
+}
+.payIcon:hover { border-color: rgba(196,168,130,0.3); color: rgba(196,168,130,0.5); }
+
+.signature {
+  padding: 20px 72px;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.sigLine {
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(196,168,130,0.12), transparent);
+}
+.sigText {
+  font-family: 'Cormorant SC', serif; font-size: 0.55rem; font-weight: 300;
+  letter-spacing: 0.3em; color: rgba(196,168,130,0.35);
+  text-transform: uppercase; white-space: nowrap; text-align: center;
+}
+.sigText a { color: rgba(196,168,130,0.45); text-decoration: none; transition: color 0.3s; }
+.sigText a:hover { color: #C4A882; }
+
+@media (max-width: 1100px) {
+  .top { grid-template-columns: 1fr 1fr; padding: 64px 48px 52px; }
+  .brand { grid-column: 1 / -1; }
+  .mid { padding: 40px 48px; }
+  .bottom { padding: 20px 48px; }
+  .signature { padding: 18px 48px; }
+}
+@media (max-width: 768px) {
+  .top { grid-template-columns: 1fr 1fr; padding: 52px 28px 44px; gap: 36px; }
+  .mid { grid-template-columns: 1fr; padding: 36px 28px; gap: 32px; }
+  .awards { justify-content: flex-start; }
+  .bottom { flex-direction: column; align-items: flex-start; padding: 18px 28px; }
+  .signature { padding: 16px 28px; }
+}
+@media (max-width: 480px) {
+  .top { grid-template-columns: 1fr; padding: 44px 18px 36px; }
+  .mid { padding: 28px 18px; }
+  .bottom { padding: 16px 18px; }
+  .signature { padding: 14px 18px; }
+  .legal { gap: 14px; }
+  .sigLine { display: none; }
+}

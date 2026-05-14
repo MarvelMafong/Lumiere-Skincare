@@ -1,0 +1,52 @@
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+
+.ch, .cv {
+  position: absolute;
+  transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.ch {
+  width: 28px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(232, 180, 184, 0.85);
+}
+
+.cv {
+  width: 1px;
+  height: 28px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(232, 180, 184, 0.85);
+}
+
+.diamond {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #E8B4B8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.cursor.hov .ch { width: 44px; background: rgba(196, 168, 130, 0.95); }
+.cursor.hov .cv { height: 44px; background: rgba(196, 168, 130, 0.95); }
+.cursor.hov .diamond { width: 9px; height: 9px; background: #C4A882; }
+
+.cursor.click .ch { width: 16px; opacity: 0.5; }
+.cursor.click .cv { height: 16px; opacity: 0.5; }
+.cursor.click .diamond { transform: translate(-50%, -50%) rotate(45deg) scale(1.8); }
+
+@media (max-width: 768px) {
+  .cursor { display: none; }
+}

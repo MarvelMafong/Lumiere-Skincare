@@ -1,0 +1,57 @@
+.section {
+  position: relative;
+  background: #1B4332;
+  padding: 100px 60px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.section::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #0A0F0D, transparent);
+  pointer-events: none;
+}
+.texture {
+  position: absolute; inset: 0;
+  background-image: url('/images/ingredients-flatlay.jpg');
+  background-size: cover; background-position: center;
+  opacity: 0.04; mix-blend-mode: luminosity; pointer-events: none;
+}
+.inner {
+  position: relative; z-index: 5;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+.diamond {
+  width: 10px; height: 10px; background: #E8B4B8;
+  transform: rotate(45deg); margin: 0 auto 32px; opacity: 0.7;
+}
+.statement {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 200; color: #FAFAF7;
+  letter-spacing: -0.015em; line-height: 1.25; margin-bottom: 32px;
+  word-break: break-word; overflow-wrap: break-word;
+}
+.accent { color: #E8B4B8; }
+.rule {
+  width: 48px; height: 1px;
+  background: linear-gradient(to right, #C4A882, #E8B4B8);
+  margin: 0 auto 32px;
+}
+.tagline {
+  font-family: 'Cormorant SC', serif; font-size: 0.7rem; font-weight: 300;
+  letter-spacing: 0.45em; color: rgba(250,250,247,0.5); text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .inner { width: 90%; }
+}
+@media (max-width: 480px) {
+  .section { padding: 60px 0; }
+}
